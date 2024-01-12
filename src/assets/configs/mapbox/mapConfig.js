@@ -4,8 +4,8 @@ export const MapObjectConfig = {
 	container: "mapboxBox",
 	center: [121.251374, 24.932593],
 	maxBounds: [
-		[121.0970596781498, 24.65733863075891], // Southwest coordinates
-		[121.4198231749096, 25.11179993640203], // Northeast coordinates
+		[120.7788244625934, 24.66406101219444], // Southwest coordinates
+		[121.45544280754967, 25.107221440238202], // Northeast coordinates
 	],
 	zoom: 12.5,
 	minZoom: 11,
@@ -314,6 +314,34 @@ export const maplayerCommonLayout = {
 			0.4,
 			22,
 			0.9,
+		],
+	},
+	"symbol-chimneys": {
+		"icon-image": "chimneys",
+		"icon-size": [
+			"interpolate",
+			["linear"],
+			["zoom"],
+			11.99,
+			0.09,
+			14,
+			0.12,
+			22,
+			0.27,
+		],
+	},
+	"symbol-fire": {
+		"icon-image": "fire",
+		"icon-size": [
+			"interpolate",
+			["linear"],
+			["zoom"],
+			11.99,
+			0.09,
+			14,
+			0.12,
+			22,
+			0.27,
 		],
 	},
 	"symbol-triangle_green": {

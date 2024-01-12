@@ -1,6 +1,18 @@
 {
 	"data": [
 		{
+			"name": "空氣汙染",
+			"index": "airpollution",
+			"components": [
+				"201",
+				"203",
+				"202",
+				"204",
+				"205"
+			],
+			"icon": "child_friendly"
+		},
+		{
 			"name": "祝您好孕",
 			"index": "childcare",
 			"components": [

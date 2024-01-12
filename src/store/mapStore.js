@@ -132,11 +132,13 @@ export const useMapStore = defineStore("map", {
 		addSymbolSources() {
 			const images = [
 				"metro",
+				"chimneys",
+				"fire",
 				"triangle_green",
 				"triangle_white",
 				"bike_green",
 				"bike_orange",
-				"bike_red",
+				"bike_red"
 			];
 			images.forEach((element) => {
 				this.map.loadImage(

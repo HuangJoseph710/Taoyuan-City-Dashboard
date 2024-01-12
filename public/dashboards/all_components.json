@@ -5159,6 +5159,207 @@
 				"林育緹",
 				"tuic"
 			]
-		}
+		},
+		"201": {
+			"id": 201,
+			"index": "aqi",
+			"map_config": null,
+			"chart_config": {
+				"types": ["TimelineSeparateChart", "TimelineStackedChart"],
+				"color": ["#4dd97a", "#0a85f4"],
+				"unit": ""
+			},
+			"name": "AQI",
+			"source": "都發局建管處",
+			"time_from": "2023-01-01T00:00:00+08:00",
+			"time_to": "2023-06-01T00:00:00+08:00",
+			"update_freq": 1,
+			"update_freq_unit": "day",
+			"short_desc": "顯示今年一月開始台北市使照與建照的發照量",
+			"long_desc": "顯示今年一月開始台北市使照與建照的發照量，資料來源為台北市都發局建管處開放資料，每月更新",
+			"use_case": "藉由這些圖表數據，我們可以追蹤使照與建照的變化趨勢，並進一步分析相關因素對於發照量的影響，以助於對都市發展和建設進行更明確的規劃與評估",
+			"links": [
+				"https://data.taipei/dataset/detail?id=0816f991-e6c8-4da0-a789-d022fee1462b",
+				"https://data.taipei/dataset/detail?id=d8834353-ff8e-4a6c-9730-a4d3541f2669"
+			],
+			"tags": [],
+			"contributors": ["cycu"]
+		},
+		"203": {
+			"id": 203,
+			"index": "aqi",
+			"map_config": null,
+			"chart_config": {
+				"types": ["TimelineSeparateChart", "TimelineStackedChart"],
+				"color": ["#4dd97a", "#0a85f4"],
+				"unit": "μg/m3"
+			},
+			"name": "PM2.5",
+			"source": "都發局建管處",
+			"time_from": "2023-01-01T00:00:00+08:00",
+			"time_to": "2023-06-01T00:00:00+08:00",
+			"update_freq": 1,
+			"update_freq_unit": "day",
+			"short_desc": "顯示今年一月開始台北市使照與建照的發照量",
+			"long_desc": "顯示今年一月開始台北市使照與建照的發照量，資料來源為台北市都發局建管處開放資料，每月更新",
+			"use_case": "藉由這些圖表數據，我們可以追蹤使照與建照的變化趨勢，並進一步分析相關因素對於發照量的影響，以助於對都市發展和建設進行更明確的規劃與評估",
+			"links": [
+				"https://data.taipei/dataset/detail?id=0816f991-e6c8-4da0-a789-d022fee1462b",
+				"https://data.taipei/dataset/detail?id=d8834353-ff8e-4a6c-9730-a4d3541f2669"
+			],
+			"tags": [],
+			"contributors": ["cycu"]
+		},
+		"202": {
+			"id": 202,
+			"index": "fire_point",
+			"map_config": [
+				{
+					"index": "fire_point",
+					"property": [
+						{
+							"key": "latitude",
+							"name": "緯度"
+						},
+						{
+							"key": "longitude",
+							"name": "經度"
+						},
+						{
+							"key": "brightness",
+							"name": "亮度溫度"
+						},
+						{
+							"key": "acq_date",
+							"name": "發生日期"
+						},
+						{
+							"key": "acq_time",
+							"name": "發生時間"
+						},
+						{
+							"key": "frp",
+							"name": "火輻射功率（MW 兆瓦）"
+						}
+					],
+					"type": "symbol",
+     				"icon": "fire",
+					"title": "火點"
+				}
+			],
+			"chart_config": {
+			 "types": ["MapLegend"]
+			},
+			"chart_data": [
+			 {
+			  "type": "fill",
+			  "color": "#59CD90",
+			  "name": "路口人流量(個)",
+			  "value": "224"
+			 }
+			],
+			"name": "火點資料",
+			"source": "交通局",
+			"short_desc": "顯示中原大學周邊路口人流量",
+			"long_desc": "顯示中原大學周邊路口人流量，資料來源為桃園市交通局公開資料，不定期更新。",
+			"use_case": "了解中原大學周邊路口人流量，疊加於地圖顯示，以利設置行人專用時相",
+			"links": ["https://data.gov.tw/dataset/5958"],
+			"tags": [],
+			"contributors": ["cxll"]
+		   },
+		   "204": {
+			"id": 204,
+			"index": "sensors",
+			"map_config": [
+				{
+					"index": "sensors",
+					"paint": {
+						"circle-color": [
+							"case",
+							["==", ["get", "rank"], 1],
+							"#70C1B3",
+							["==", ["get", "rank"], 2],
+							"#70C1B3",
+							["==", ["get", "rank"], 3],
+							"#FFE066",
+							"#F25F5C"
+						]
+					},
+					"property": [
+						{
+							"key": "Station_ID",
+							"name": "站點編號"
+						}
+					],
+					"title": "站點資料",
+					"type": "circle",
+					"size": "big",
+					"icon": null
+				}
+			],
+			"chart_config": {
+			"types": ["MapLegend"]
+			},
+			"chart_data": [
+			{
+				"type": "fill",
+				"color": "#59CD90",
+				"name": "路口人流量(個)",
+				"value": "224"
+			}
+			],
+			"name": "站點資料",
+			"source": "交通局",
+			"time_from": "2024-01-01T00:00:00+08:00",
+			"time_to": "2024-01-07T23:59:59+08:00",
+			"update_freq": 1,
+			"update_freq_unit": "week",
+			"short_desc": "顯示桃園市各行政區設置行人專用時相後的績效。",
+			"long_desc": "顯示桃園市各行政區設置行人專用時相後的績效分數，從0-100分，分為五階段，【A】：0-20分，【B】：21-40分，【C】：41-60分，【D】：61-80分，【E】：81-100分，資料來源為桃園市交通局內部資料，每週更新。",
+			"use_case": "顯示桃園市各行政區設置行人專用時相後的績效分數，從0-100分，可知道設置行人專用時相後，有沒有改善？",
+			"links": null,
+			"contributors": ["cxll"]
+		},
+		"205": {
+			"id": 205,
+			"index": "chimney",
+			"map_config": [
+				{
+					"index": "chimney",
+					"property": [
+						{
+							"key": "Chimney_ID",
+							"name": "煙囪編號"
+						},
+						{
+							"key": "Company_Name",
+							"name": "所屬公司"
+						}
+					],
+					"type": "symbol",
+     				"icon": "chimneys",
+					"title": "煙囪"
+				}
+			],
+			"chart_config": {
+			 "types": ["MapLegend"]
+			},
+			"chart_data": [
+			 {
+			  "type": "fill",
+			  "color": "#59CD90",
+			  "name": "路口人流量(個)",
+			  "value": "224"
+			 }
+			],
+			"name": "煙囪資料",
+			"source": "交通局",
+			"short_desc": "顯示中原大學周邊路口人流量",
+			"long_desc": "顯示中原大學周邊路口人流量，資料來源為桃園市交通局公開資料，不定期更新。",
+			"use_case": "了解中原大學周邊路口人流量，疊加於地圖顯示，以利設置行人專用時相",
+			"links": ["https://data.gov.tw/dataset/5958"],
+			"tags": [],
+			"contributors": ["cxll"]
+		   }
 	}
 }

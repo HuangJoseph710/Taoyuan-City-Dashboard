@@ -1,5 +1,10 @@
 {
 	"data": {
+		"cycu": {
+			"id": "cycu",
+			"name": "黃恆嘉",
+			"link": "https://youtube.com"
+		},
 		"tuic": {
 			"id": "tuic",
 			"name": "臺北大數據中心",
