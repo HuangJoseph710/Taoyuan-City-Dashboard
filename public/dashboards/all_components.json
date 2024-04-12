@@ -5258,8 +5258,8 @@
 			  "value": "224"
 			 }
 			],
-			"name": "火點資料",
-			"source": "交通局",
+			"name": "火災發生點位",
+			"source": "消防局",
 			"short_desc": "顯示中原大學周邊路口人流量",
 			"long_desc": "顯示中原大學周邊路口人流量，資料來源為桃園市交通局公開資料，不定期更新。",
 			"use_case": "了解中原大學周邊路口人流量，疊加於地圖顯示，以利設置行人專用時相",
@@ -5279,7 +5279,7 @@
 							["==", ["get", "rank"], 1],
 							"#70C1B3",
 							["==", ["get", "rank"], 2],
-							"#70C1B3",
+							"#247BA0",
 							["==", ["get", "rank"], 3],
 							"#FFE066",
 							"#F25F5C"
@@ -5303,17 +5303,35 @@
 			"chart_data": [
 			{
 				"type": "fill",
-				"color": "#59CD90",
-				"name": "路口人流量(個)",
-				"value": "224"
+				"color": "#70C1B3",
+				"name": "良好",
+				"value": "631"
+			},
+			{
+				"type": "fill",
+				"color": "#247BA0",
+				"name": "普通",
+				"value": "635"
+			},
+			{
+				"type": "fill",
+				"color": "#FFE066",
+				"name": "對敏感族群不健康",
+				"value": "635"
+			},
+			{
+				"type": "fill",
+				"color": "#F25F5C",
+				"name": "異常狀況",
+				"value": "9"
 			}
 			],
-			"name": "站點資料",
-			"source": "交通局",
+			"name": "感測器資料",
+			"source": "環保部",
 			"time_from": "2024-01-01T00:00:00+08:00",
 			"time_to": "2024-01-07T23:59:59+08:00",
 			"update_freq": 1,
-			"update_freq_unit": "week",
+			"update_freq_unit": "minute",
 			"short_desc": "顯示桃園市各行政區設置行人專用時相後的績效。",
 			"long_desc": "顯示桃園市各行政區設置行人專用時相後的績效分數，從0-100分，分為五階段，【A】：0-20分，【B】：21-40分，【C】：41-60分，【D】：61-80分，【E】：81-100分，資料來源為桃園市交通局內部資料，每週更新。",
 			"use_case": "顯示桃園市各行政區設置行人專用時相後的績效分數，從0-100分，可知道設置行人專用時相後，有沒有改善？",
@@ -5348,8 +5366,8 @@
 			 {
 			  "type": "fill",
 			  "color": "#59CD90",
-			  "name": "路口人流量(個)",
-			  "value": "224"
+			  "name": "煙囪數量(個)",
+			  "value": "20"
 			 }
 			],
 			"name": "煙囪資料",
@@ -5360,6 +5378,76 @@
 			"links": ["https://data.gov.tw/dataset/5958"],
 			"tags": [],
 			"contributors": ["cxll"]
-		   }
+		   },
+		   "206": {
+			   "id": 206,
+			   "index": "exception",
+			   "chart_config": {
+				   "categories": [
+					"大園區",
+					"觀音區",
+					"龜山區",
+					"大溪區",
+					"龍潭區",
+					"楊梅區",
+					"桃園區",
+					"新屋區",
+					"中壢區",
+					"八德區",
+					"平鎮區",
+					"復興區",
+					"蘆竹區"
+				   ],
+				   "types": ["HeatmapChart", "DistrictChart"],
+				   "color": ["#A03A3B", "#BF672B", "#3A69A0"],
+				   "unit": "次"
+			   },
+			   "name": "異常發生原因",
+			   "source": "環保局",
+			   "time_from": "2020-07-27T10:46:50+08:00",
+			   "time_to": "2023-10-11T17:34:44+08:00",
+			   "update_freq": 1,
+			   "update_freq_unit": "month",
+			   "short_desc": "顯示臺北市育兒支持資源統計。",
+			   "long_desc": "顯示臺北市育兒支持資源統計。",
+			   "use_case": "顯示臺北市育兒支持資源統計。",
+			   "links": [
+				   "https://data.taipei/dataset/detail?id=fd4779d0-827d-4ab3-8f65-2a356abad6d9",
+				   "https://data.taipei/dataset/detail?id=7262cdae-18e7-4d33-a842-4978cbc84d43",
+				   "https://data.taipei/dataset/detail?id=41c729ce-c848-492a-b7a6-db468f06c17c",
+				   "https://data.taipei/dataset/detail?id=a7462972-0380-4987-99fb-2071e798ce66",
+				   "https://data.taipei/dataset/detail?id=7c66efcd-d073-401c-b18a-7a46728776c4",
+				   "https://data.taipei/dataset/detail?id=9c9a3f77-8340-48d8-bc0e-f9155521b758",
+				   "https://data.taipei/dataset/detail?id=081df75e-85c7-464c-b125-546920911c5c",
+				   "https://data.taipei/dataset/detail?id=01ac5a1d-dfc3-44c7-84a7-6d76bcb2879b"
+			   ],
+			   "contributors": [
+				   "cycu"
+			   ]
+		   },
+		   "210": {
+			"id": 210,
+			"index": "airpolution_event",
+			"map_config": null,
+			"chart_config": {
+				"color": ["#E06666", "#00A9E0"],
+				"types": ["ColumnLineChart", "TimelineSeparateChart"],
+				"unit": "件"
+			},
+			"name": "空氣污染事件",
+			"source": "環保局",
+			"time_from": "2013-01-01T23:59:59+08:00",
+			"time_to": "2022-12-31T23:59:59+08:00",
+			"update_freq": 1,
+			"update_freq_unit": "year",
+			"short_desc": "顯示每年空氣污染事件發生次數",
+			"long_desc": "顯示每年空氣污染事件發生次數，資料來源為桃園市環保局開放資料，每年更新。",
+			"use_case": "藉由掌握數量趨勢推估是否有逐漸掌握空氣污染現象，並使之趨緩",
+			"links": [
+				"https://data.taipei/dataset/detail?id=dc7e246a-a88e-42f8-8cd6-9739209af774"
+			],
+			"tags": [],
+			"contributors": ["cycu"]
+		}
 	}
 }
